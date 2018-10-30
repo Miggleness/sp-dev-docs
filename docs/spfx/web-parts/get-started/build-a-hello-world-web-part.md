@@ -310,6 +310,12 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
   ```typescript
   <p class="${ styles.description }">${escape(this.properties.test)}</p>
   ```
+  
+  Properties of boolean type need not be escaped but must be converted to string.
+  
+  ```typescript
+  <p class="${ styles.description }">${this.properties.test1.toString()}</p>
+  ```
 
   To set the default value for the properties, you need to update the web part manifest's **properties** property bag.
 
